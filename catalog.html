@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+
+    <nav class="main-nav">
+      <a class="logo" href="index.html">Мишка
+        <svg class="main-nav__svg" width="86" height="35">
+          <rect x="0" y="0" width="86" height="35" fill="#d3d2d2" stroke="#000"/>
+        </svg>
+      </a>
+      <button type="button" class="main-nav__btn">
+        <svg class="main-nav__svg" width="20" height="17">
+          <rect x="0" y="0" width="20" height="17" fill="#221f1f" stroke="#000"/>
+        </svg>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a class="main-nav__link">Каталог товаров</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="#">Поиск по сайту
+            <svg class="main-nav__svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста
+            <svg class="main-nav__svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="inner-header">
+      <h1 class="header-title">Каталог товаров</h1>
+    </header>
+
+    <main class="main-content">
+
+      <article class="item">
+        <a class="item__info-link" href="#">
+          <img class="item__pic" src="#" width="260" height="195" alt="Изображение товара">
+        </a>
+        <div class="item__brief-info">
+          <a class="item__info-link" href="#">
+            <span class="item__title">Зайчик-попрыгайчик</span>
+          </a>
+          <p class="item__properties">Рост 30 см, вес 200 г</p>
+        </div>
+        <div class="item__purchase">
+          <span class="item__price">1200 руб.</span>
+          <a class="item__info-link" href="#">Корзина
+            <svg class="item__cart-svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="item">
+        <a class="item__info-link" href="#">
+          <img class="item__pic" src="#" width="260" height="195" alt="Изображение товара">
+        </a>
+        <div class="item__brief-info">
+          <a class="item__info-link" href="#">
+            <span class="item__title">Корзинка для белья</span>
+          </a>
+          <p class="item__properties">Диаметр 15 см, высота 10 см</p>
+        </div>
+        <div class="item__purchase">
+          <span class="item__price">690 руб.</span>
+          <a class="item__info-link" href="#">Корзина
+            <svg class="item__cart-svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="item">
+        <a class="item__info-link" href="#">
+          <img class="item__pic" src="#" width="260" height="195" alt="Изображение товара">
+        </a>
+        <div class="item__brief-info">
+          <a class="item__info-link" href="#">
+            <span class="item__title">Большая корзинка для игрушек</span>
+          </a>
+          <p class="item__properties">Диаметр 30 см, высота 30 см</p>
+        </div>
+        <div class="item__purchase">
+          <span class="item__price">1500 руб.</span>
+          <a class="item__info-link" href="#">Корзина
+            <svg class="item__cart-svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="video">
+        <svg class="video__svg" width="30" height="30">
+          <rect x="0" y="0" width="30" height="30" fill="#63d1bb" stroke="#000"/>
+        </svg>
+        <h2 class="video__title">Процесс производства</h2>
+        <video class="video__container" width="265" height="150" poster="" controls>
+          <source src="video.mp4" type="video/mp4">
+          <source src="video.ogv" type="video/ogg">
+          <source src="video.webm" type="video/webm">
+        </video>
+        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="user-btn" href="form.html">Сделать заказ</a>
+      </article>
+    </main>
+
+    <footer class="main-footer">
+      <section class="main-footer__social">
+        <a href="#" class="social-link" alt="instagram">
+          Instagram
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" alt="facebook">
+          Facebook
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" alt="twitter">
+          Twitter
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+      </section>
+      <section class="main-footer__copyright">
+        <a href="#" class="creators">
+          Разработано
+          <svg width="28" height="34">
+            <rect x="0" y="0" width="28" height="34" fill="#63d1bb" stroke="#000"/>
+          </svg>
+        </a>
+      </section>
+    </footer>
+
+  </body>
+</html>

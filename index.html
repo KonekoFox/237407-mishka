@@ -6,7 +6,190 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <nav class="main-nav">
+      <a class="logo">Мишка
+        <svg class="main-nav__svg" width="86" height="35">
+          <rect x="0" y="0" width="86" height="35" fill="#d3d2d2" stroke="#000"/>
+        </svg>
+      </a>
+      <button type="button" class="main-nav__btn">
+        <svg class="main-nav__svg" width="20" height="17">
+          <rect x="0" y="0" width="20" height="17" fill="#221f1f" stroke="#000"/>
+        </svg>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="#">Поиск по сайту
+            <svg class="main-nav__svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста
+            <svg class="main-nav__svg" width="20" height="20">
+              <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="main-header">
+      <h1 class="header-title">Милые штучки ручной работы для дома</h1>
+      <ul class="type-list">
+        <li class="type-list__item">
+          <a class="type-list__item-link" href="#">
+            <span class="type-list__item-name">Аксессуары для дома</span>
+            <svg class="type-list__item-image" src="#" width="70" height="65">
+              <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+        <li class="type-list__item">
+          <a class="type-list__item-link" href="#">
+            <span class="type-list__item-name">Детские игрушка</span>
+            <svg class="type-list__item-image" width="70" height="65">
+              <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="main-content">
+      <article class="item-detailed item-detailed--bestseller">
+        <h2 class="item-detailed__title">Вязаные корзинки</h2>
+        <p class="item-detailed__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="item-detailed__properties">
+          <tr>
+            <td class="item-detailed__prop">Цвет:</td>
+            <td class="item-detailed__prop-value">&laquo;Тиффани&raquo;/серый</td>
+          </tr>
+          <tr>
+            <td class="item-detailed__prop">Диаметр:</td>
+            <td class="item-detailed__prop-value">25 см</td>
+          </tr>
+          <tr>
+            <td class="item-detailed__prop">Высота:</td>
+            <td class="item-detailed__prop-value">15 см</td>
+          </tr>
+        </table>
+        <img class="item-detailed__image" src="#" width="260" height="315" alt="Вязаные корзинки">
+        <p class="item-detailed__price">Цена: 990 руб.</p>
+        <a class="button" href="#">Заказать</a>
+      </article>
+
+      <section class="features">
+        <h2 class="section-title">Коротко о нас</h2>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Экологически чистые материалы</p>
+        </div>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Скандинавский стиль по российской цене</p>
+        </div>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Увеличивает лайки на фотографиях</p>
+        </div>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Связвно вручную с любовью и умилением</p>
+        </div>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Поддержка отечественного производителя</p>
+        </div>
+        <div class="features__item">
+          <svg class="features__item-pic" width="47" height="27">
+            <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
+          </svg>
+          <p class="features__item-description">Поставляется в подарочной упаковке</p>
+        </div>
+      </section>
+
+      <section class="feedback-section">
+        <h2 class="section-title">Отзывы</h2>
+        <div class="feedback">
+          <p class="feedback__message">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
+            В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <div class="author">
+            <span class="author__name">Анастасия красильникова</span><br>
+            <span class="author__id">@misssssiskras</span>
+          </div>
+        </div>
+        <div class="feedback-section__controls">
+          <a class="control-btn" href="#">Назад</a>
+          <a class="control-btn" href="#">Вперед</a>
+        </div>
+        <a class="user-btn" href="#">Написать</a>
+      </section>
+
+      <section class="contacts">
+        <table class="contacts__table">
+          <caption>Контакты</caption>
+          <tr>
+            <td>email:</td>
+            <td>info@mimimishkashop.ru</td>
+          </tr>
+          <tr>
+            <td>адрес:</td>
+            <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          </tr>
+        </table>
+        <div class="map"></div>
+        <a class="user-btn" href="#">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <section class="main-footer__social">
+        <a href="#" class="social-link" alt="instagram">
+          Instagram
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" alt="facebook">
+          Facebook
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" alt="twitter">
+          Twitter
+          <svg width="20" height="20">
+            <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
+          </svg>
+        </a>
+      </section>
+      <section class="main-footer__copyright">
+        <a href="#" class="creators">
+          Разработано
+          <svg width="28" height="34">
+            <rect x="0" y="0" width="28" height="34" fill="#63d1bb" stroke="#000"/>
+          </svg>
+        </a>
+      </section>
+    </footer>
 
   </body>
 </html>
