@@ -1,0 +1,24 @@
+.user-btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+
+  .set-text-params(17px; 700; 48px);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  color: @lightbrown;
+
+  background-color: #ffffff;
+  border: 2px solid @lightbrown;
+
+  &:hover {
+    color: #ffffff;
+    background-color: @lightbrown;
+  }
+
+  &:active {
+    color: fadeout(#ffffff, 70%);
+  }
+}
