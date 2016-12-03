@@ -1,0 +1,54 @@
+.item {
+  margin: @block-margin;
+}
+
+.item__desc {
+  border: 1px solid #ededed;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.item__pic {
+  display: block;
+}
+
+.item__link {
+  color: #000000;
+  text-decoration: none;
+
+  &:hover {
+    color: fadeout(#000000; 40%);
+  }
+
+  &:active {
+    color: fadeout(#000000; 70%);;
+  }
+}
+
+.item__cart {
+  .hide-text;
+}
+
+.item__brief-info,
+.item__purchase {
+  padding: 28px;
+}
+
+.item__title {
+  .set-text-params(17px; 700; 24px);
+}
+
+.item__properties {
+  .set-text-params(13px; 400; 30px);
+  color: @lightbrown;
+}
+
+.item__price {
+  .set-text-params(15px; 700; 24px);
+}

@@ -3,20 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body">
 
     <nav class="main-nav">
-      <a class="logo">Мишка
+      <a class="main-nav__logo">Мишка
         <svg class="main-nav__svg" width="86" height="35">
           <rect x="0" y="0" width="86" height="35" fill="#d3d2d2" stroke="#000"/>
         </svg>
       </a>
-      <button type="button" class="main-nav__btn">
-        <svg class="main-nav__svg" width="20" height="17">
+      <a class="main-nav__btn" href="#">Меню
+        <svg class="main-nav__btn-svg" width="20" height="17">
           <rect x="0" y="0" width="20" height="17" fill="#221f1f" stroke="#000"/>
         </svg>
-      </button>
+      </a>
+
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -26,14 +28,14 @@
         </li>
         <li class="main-nav__list-item">
           <a class="main-nav__link" href="#">Поиск по сайту
-            <svg class="main-nav__svg" width="20" height="20">
+            <svg class="main-nav__link-svg" width="20" height="20">
               <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
             </svg>
           </a>
         </li>
         <li class="main-nav__list-item">
           <a class="main-nav__link" href="#">Корзина: пока пуста
-            <svg class="main-nav__svg" width="20" height="20">
+            <svg class="main-nav__link-svg" width="20" height="20">
               <rect x="0" y="0" width="20" height="20" fill="#d3d2d2" stroke="#000"/>
             </svg>
           </a>
@@ -42,25 +44,19 @@
     </nav>
 
     <header class="main-header">
-      <h1 class="header-title">Милые штучки ручной работы для дома</h1>
-      <ul class="type-list">
-        <li class="type-list__item">
-          <a class="type-list__item-link" href="#">
-            <span class="type-list__item-name">Аксессуары для дома</span>
-            <svg class="type-list__item-image" src="#" width="70" height="65">
-              <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
-            </svg>
-          </a>
-        </li>
-        <li class="type-list__item">
-          <a class="type-list__item-link" href="#">
-            <span class="type-list__item-name">Детские игрушка</span>
-            <svg class="type-list__item-image" width="70" height="65">
-              <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <h1 class="main-header__title">Милые штучки ручной работы для дома</h1>
+      <a class="main-header__type" href="#">
+        <span class="main-header__type-name">Предметы<br>интерьера</span>
+        <svg class="main-header__type-image" width="70" height="65">
+          <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
+        </svg>
+      </a>
+      <a class="main-header__type" href="#">
+        <span class="main-header__type-name">Детские<br>игрушки</span>
+        <svg class="main-header__type-image" width="70" height="65">
+          <rect x="0" y="0" width="70" height="65" fill="rgba(20, 144, 128, 0.5)" stroke="#000"/>
+        </svg>
+      </a>
     </header>
 
     <main class="main-content">
@@ -81,13 +77,17 @@
             <td class="item-detailed__prop-value">15 см</td>
           </tr>
         </table>
-        <img class="item-detailed__image" src="#" width="260" height="315" alt="Вязаные корзинки">
+        <img class="item-detailed__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         <p class="item-detailed__price">Цена: 990 руб.</p>
-        <a class="button" href="#">Заказать</a>
+        <a class="user-btn" href="#">Заказать</a>
       </article>
 
+      <svg width="100%" height="3">
+        <rect x="0" y="0" width="100%" height="3" fill="#444444" stroke="#444444"/>
+      </svg>
+
       <section class="features">
-        <h2 class="section-title">Коротко о нас</h2>
+        <h2 class="features__title">Коротко о нас:</h2>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="27">
             <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
@@ -110,7 +110,7 @@
           <svg class="features__item-pic" width="47" height="27">
             <rect x="0" y="0" width="47" height="27" fill="#63d1bb" stroke="#000"/>
           </svg>
-          <p class="features__item-description">Связвно вручную с любовью и умилением</p>
+          <p class="features__item-description">Связано вручную с любовью и умилением</p>
         </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="27">
@@ -127,13 +127,13 @@
       </section>
 
       <section class="feedback-section">
-        <h2 class="section-title">Отзывы</h2>
+        <h2 class="feedback-section__title">Отзывы</h2>
         <div class="feedback">
           <p class="feedback__message">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
             В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <div class="author">
-            <span class="author__name">Анастасия красильникова</span><br>
-            <span class="author__id">@misssssiskras</span>
+          <div class="feedback__author">
+            <span class="feedback__author-name">Анастасия красильникова</span><br>
+            <span class="feedback__author-id">@misssssiskras</span>
           </div>
         </div>
         <div class="feedback-section__controls">
@@ -143,38 +143,44 @@
         <a class="user-btn" href="#">Написать</a>
       </section>
 
+      <svg width="100%" height="3">
+        <rect x="0" y="0" width="100%" height="3" fill="#444444" stroke="#444444"/>
+      </svg>
+
       <section class="contacts">
         <table class="contacts__table">
-          <caption>Контакты</caption>
+          <caption class="contacts__title">Контакты</caption>
           <tr>
-            <td>email:</td>
-            <td>info@mimimishkashop.ru</td>
+            <td class="contacts__table-cell">email:</td>
+            <td class="contacts__table-cell">
+              <a class="email-link" href="#">info@mimimishkashop.ru</a>
+            </td>
           </tr>
           <tr>
-            <td>адрес:</td>
-            <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+            <td class="contacts__table-cell">адрес:</td>
+            <td class="contacts__table-cell">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
           </tr>
         </table>
-        <div class="map"></div>
+        <div class="contacts__map"></div>
         <a class="user-btn" href="#">Напишите нам</a>
       </section>
     </main>
 
     <footer class="main-footer">
       <section class="main-footer__social">
-        <a href="#" class="social-link" alt="instagram">
+        <a href="#" class="social-link">
           Instagram
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </a>
-        <a href="#" class="social-link" alt="facebook">
+        <a href="#" class="social-link">
           Facebook
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </a>
-        <a href="#" class="social-link" alt="twitter">
+        <a href="#" class="social-link">
           Twitter
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
@@ -182,7 +188,7 @@
         </a>
       </section>
       <section class="main-footer__copyright">
-        <a href="#" class="creators">
+        <a href="#" class="developers">
           Разработано
           <svg width="28" height="34">
             <rect x="0" y="0" width="28" height="34" fill="#63d1bb" stroke="#000"/>
@@ -191,5 +197,6 @@
       </section>
     </footer>
 
+    <script src="js/app.js"></script>
   </body>
 </html>

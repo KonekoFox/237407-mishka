@@ -3,26 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body">
 
     <nav class="main-nav">
-      <a class="logo" href="index.html">Мишка
+      <a class="main-nav__logo" href="index.html">Мишка
         <svg class="main-nav__svg" width="86" height="35">
           <rect x="0" y="0" width="86" height="35" fill="#d3d2d2" stroke="#000"/>
         </svg>
       </a>
-      <button type="button" class="main-nav__btn">
-        <svg class="main-nav__svg" width="20" height="17">
+      <a class="main-nav__btn" href="#">Меню
+        <svg class="main-nav__btn-svg" width="20" height="17">
           <rect x="0" y="0" width="20" height="17" fill="#221f1f" stroke="#000"/>
         </svg>
-      </button>
+      </a>
+
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__list-item">
-          <a class="main-nav__link">Вязание на заказ</a>
+          <a class="main-nav__link main-nav__current-link">Вязание на заказ</a>
         </li>
         <li class="main-nav__list-item">
           <a class="main-nav__link" href="#">Поиск по сайту
@@ -46,107 +48,107 @@
     </header>
 
     <main class="main-content">
-      <form class="main-form" action="#" method="post">
-        <p class="description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form" action="#" method="post">
+        <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">Тип</h2>
-          <div class="main-form__field-wrapper">
-            <input type="radio" class="filters-radio" id="accesoir" name="type" value="accesoir" checked>
-            <label for="accesoir" class="main-form__label radio-label">Аксессуар для дома</label>
+        <div class="form__wrapper">
+          <h2 class="form__title">Тип</h2>
+          <div class="form__field-wrapper">
+            <input type="radio" class="form__filters-radio" id="accessory" name="type" value="accesoir" checked>
+            <label for="accessory" class="form__label form__radio-label">Аксессуар для дома</label>
           </div>
-          <div class="main-form__field-wrapper">
-            <input type="radio" class="filters-radio" id="toy" name="type" value="toy">
-            <label for="toy" class="main-form__label label">Детская игрушка</label>
+          <div class="form__field-wrapper">
+            <input type="radio" class="form__filters-radio" id="toy" name="type" value="toy">
+            <label for="toy" class="form__label form__radio-label">Детская игрушка</label>
           </div>
         </div>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">Цвет</h2>
-          <div class="main-form__field-wrapper">
-            <input type="checkbox" class="filters-checkbox" id="white" name="white" checked>
-            <label for="white" class="main-form__label checkbox-label">Белый</label>
+        <div class="form__wrapper">
+          <h2 class="form__title">Цвет</h2>
+          <div class="form__field-wrapper">
+            <input type="checkbox" class="form__filters-checkbox" id="white" name="white" checked>
+            <label for="white" class="form__label form__checkbox-label">Белый</label>
           </div>
-          <div class="main-form__field-wrapper">
-            <input type="checkbox" class="filters-checkbox" id="gray" name="gray" checked>
-            <label for="gray" class="main-form__label checkbox-label">Серый</label>
+          <div class="form__field-wrapper">
+            <input type="checkbox" class="form__filters-checkbox" id="gray" name="gray" checked>
+            <label for="gray" class="form__label form__checkbox-label">Серый</label>
           </div>
-          <div class="main-form__field-wrapper">
-            <input type="checkbox" class="filters-checkbox" id="tiffany" name="tiffany">
-            <label for="tiffany" class="main-form__label checkbox-label">&laquo;Тиффани&raquo;</label>
+          <div class="form__field-wrapper">
+            <input type="checkbox" class="form__filters-checkbox" id="tiffany" name="tiffany">
+            <label for="tiffany" class="form__label form__checkbox-label">&laquo;Тиффани&raquo;</label>
           </div>
-          <div class="main-form__field-wrapper">
-            <input type="checkbox" class="filters-checkbox" id="black" name="black">
-            <label for="black" class="main-form__label checkbox-label">Черный</label>
+          <div class="form__field-wrapper">
+            <input type="checkbox" class="form__filters-checkbox" id="black" name="black">
+            <label for="black" class="form__label form__checkbox-label">Черный</label>
           </div>
-          <div class="main-form__field-wrapper">
+          <div class="form__field-wrapper">
             <input type="checkbox" class="filters-checkbox" id="pink" name="pink">
-            <label for="pink" class="main-form__label checkbox-label">Розовый</label>
+            <label for="pink" class="form__label form__checkbox-label">Розовый</label>
           </div>
-          <div class="main-form__field-wrapper">
+          <div class="form__field-wrapper">
             <input type="checkbox" class="filters-checkbox" id="orange" name="orange">
-            <label for="orange" class="main-form__label checkbox-label">Оранжевый</label>
+            <label for="orange" class="form__label form__checkbox-label">Оранжевый</label>
           </div>
         </div>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">ФИО</h2>
-          <div class="main-form__field-wrapper">
-            <label for="first-name">Имя:</label><br>
-            <input type="text" class="text-field" id="first-name" name="first-name" placeholder="Введите ваше имя*">
+        <div class="form__wrapper">
+          <h2 class="form__title">ФИО</h2>
+          <div class="form__field-wrapper">
+            <label for="first-name" class="form__label">Имя:</label><br>
+            <input type="text" class="form__field" id="first-name" name="first-name" placeholder="Введите ваше имя*">
           </div>
-          <div class="main-form__field-wrapper">
-            <label for="second-name">Фамилия:</label><br>
-            <input type="text" class="text-field" id="second-name" name="second-name" placeholder="Укажите фамилию*">
+          <div class="form__field-wrapper">
+            <label for="second-name" class="form__label">Фамилия:</label><br>
+            <input type="text" class="form__field" id="second-name" name="second-name" placeholder="Укажите фамилию*">
           </div>
-          <div class="main-form__field-wrapper">
-            <label for="patronimic">Отчество:</label><br>
-            <input type="text" class="text-field" id="patronimic" name="patronimic" placeholder="Отчество, если пожелаете ">
+          <div class="form__field-wrapper">
+            <label for="patronimic" class="form__label">Отчество:</label><br>
+            <input type="text" class="form__field" id="patronimic" name="patronimic" placeholder="Отчество, если пожелаете">
           </div>
         </div>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">Тел</h2>
-          <input type="tel" pattern="" placeholder="+7 ХХХ ХХ ХХ*">
-          <svg class="main-form__svg" width="20" height="20">
+        <div class="form__wrapper">
+          <h2 class="form__title">Тел</h2>
+          <input type="tel" class="form__field" pattern="" placeholder="+7 ХХХ ХХ ХХ*">
+          <svg class="form__svg" width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </div>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">E-mail</h2>
-          <input type="email" placeholder="Ваш Email*">
-          <svg class="main-form__svg" width="20" height="20">
+        <div class="form__wrapper">
+          <h2 class="form__title">E-mail</h2>
+          <input type="email" class="form__field" placeholder="Ваш Email*">
+          <svg class="form__svg" width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </div>
 
-        <div class="main-form__wrapper">
-          <h2 class="main-form__title">Доп</h2>
-          <textarea class="main-form__textarea" name="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <div class="form__wrapper">
+          <h2 class="form__title">Доп</h2>
+          <textarea class="form__field form__textarea" name="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
 
-        <p class="main-form__note">*Поля обязательны для заполнения</p>
+        <p class="form__note">*Поля обязательны для заполнения</p>
 
-        <input class="button" type="submit" value="Отправить заказ">
+        <input class="user-btn" type="submit" value="Отправить заказ">
       </form>
     </main>
 
     <footer class="main-footer">
       <section class="main-footer__social">
-        <a href="#" class="social-link" alt="instagram">
+        <a href="#" class="social-link">
           Instagram
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </a>
-        <a href="#" class="social-link" alt="facebook">
+        <a href="#" class="social-link">
           Facebook
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
           </svg>
         </a>
-        <a href="#" class="social-link" alt="twitter">
+        <a href="#" class="social-link">
           Twitter
           <svg width="20" height="20">
             <rect x="0" y="0" width="20" height="30" fill="#898888" stroke="#000"/>
@@ -154,7 +156,7 @@
         </a>
       </section>
       <section class="main-footer__copyright">
-        <a href="#" class="creators">
+        <a href="#" class="developers">
           Разработано
           <svg width="28" height="34">
             <rect x="0" y="0" width="28" height="34" fill="#63d1bb" stroke="#000"/>
@@ -163,5 +165,6 @@
       </section>
     </footer>
 
+    <script src="js/app.js"></script>
   </body>
 </html>

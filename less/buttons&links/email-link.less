@@ -1,0 +1,16 @@
+.email-link {
+  .set-text-params(15px; 400; 30px);
+  color: @lightbrown;
+  text-decoration: none;
+  border-bottom: 1px solid @lightgreen;
+
+  &:hover {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+
+  &:active {
+    color: fadeout(#46c1ae, 70%);
+    border-bottom: 1px solid fadeout(#46c1ae, 70%);
+  }
+}
