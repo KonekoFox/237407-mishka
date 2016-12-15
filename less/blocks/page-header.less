@@ -1,0 +1,364 @@
+.page-header {
+  .container;
+  background: #f1f1f1;
+
+  &--index {
+    background: #f9f9f9;
+  }
+}
+
+.extra-nav,
+.page-header__delivery {
+  display: none;
+}
+
+.page-header__logo {
+  position: relative;
+
+  display: flex;
+
+  min-height: 80px;
+  box-sizing: border-box;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  background: #ffffff;
+}
+
+.page-header__link {
+  margin: auto;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 11px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #221f1f;
+  box-shadow: 0 6px 0 0 #221f1f,
+              0 12px 0 0 #221f1f;
+}
+
+.main-nav,
+.user-nav {
+  .no-list-style;
+  background: #ffffff;
+
+  display: none;
+}
+
+.main-nav__item,
+.user-nav__item {
+  display: block;
+
+  min-height: 80px;
+  border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+}
+
+.main-nav__link,
+.user-nav__link {
+  display: block;
+  padding: 27px 0  27px 75px;
+
+  .set-text-params(17px; 700; 24px);
+  color: #000000;
+  text-decoration: none;
+
+  &:not(.main-nav__link--current):hover {
+    color: fadeout(#000000, 40%);
+  }
+
+  &:not(.main-nav__link--current):active {
+    color: fadeout(#000000, 70%);
+  }
+}
+
+.user-nav__link--search,
+.user-nav__link--cart {
+  position: relative;
+}
+
+.user-nav__link-svg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+.user-nav--closed {
+  display: none;
+}
+
+.main-nav--opened {
+  display: block;
+}
+
+.user-nav--opened {
+  display: block;
+}
+
+.head-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+
+  min-height: 177px;
+  .set-text-params(27px; 700; 30px);
+}
+
+.head-line--index {
+  display: block;
+  margin: 0;
+  height: 282px;
+  padding: 75px 35px 0;
+  box-sizing: border-box;
+
+  text-align: center;
+  background: #fbfbfb url("../img/hero-mobile@1x.jpg") no-repeat top center;
+}
+
+.shop-catalog__item {
+  position: relative;
+  display: block;
+
+  height: 103px;
+}
+
+.shop-catalog__item-type {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: block;
+
+  height: 103px;
+  padding: 28px;
+  box-sizing: border-box;
+
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: @lightgreen;
+
+  &:hover {
+    height: 108px;
+  }
+
+  &:active {
+    height: 108px;
+    color: fadeout(#ffffff, 70%);
+  }
+}
+
+.shop-catalog__item:last-child .shop-catalog__item-type {
+  background-color: #56c3b2;
+}
+
+.shop-catalog__type-name {
+  .set-text-params(19px; 700; 24px);
+}
+
+.shop-catalog__type-image {
+  position: absolute;
+  top: 23px;
+  right: 27px;
+}
+
+@media @tablet-widths {
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .page-header__logo {
+    order: -2;
+    padding-left: 48px;
+    width: 370px;
+    height: 88px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .user-nav {
+    order: -1;
+    flex-grow: 1;
+
+    display: flex;
+  }
+
+  .user-nav__item {
+    height: 88px;
+    box-sizing: border-box;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+
+  .user-nav__link {
+    padding-left: 32px;
+    box-sizing: border-box;
+
+    &--search {
+      width: 82px;
+      font-size: 0;
+    }
+
+    &--cart {
+      padding-left: 83px;
+    }
+  }
+
+  .main-nav {
+    display: flex;
+    padding-left: 48px;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  .main-nav__item {
+    min-height: auto;
+    border: none;
+  }
+
+  .main-nav__link {
+    padding: 27px 35px 0 0;
+    .set-text-params(15px; 700; 24px);
+  }
+
+  .page-header__delivery {
+    flex-grow: 1;
+
+    display: block;
+    padding: 27px 48px 0 0;
+
+    text-align: right;
+    .set-text-params(15px; 400; 24px);
+    color: @lightbrown;
+  }
+
+  .head-line {
+    width: 100%;
+  }
+
+  .head-line--index {
+    height: 555px;
+    padding: 105px 0 370px;
+
+    .set-text-params(43px; 700; 50px);
+    background: #f9f9f9 url("../img/hero-desktop.jpg") no-repeat top center;
+  }
+
+  .head-line--index + .shop-catalog {
+    width: 100%;
+    margin: 0 50px;
+    display: flex;
+
+    background: #f9f9f9;
+  }
+
+  .shop-catalog__item {
+    width: 50%;
+  }
+
+  .shop-catalog__type-name {
+    .set-text-params(20px; 700; 30px);
+  }
+
+  .shop-catalog__type-name {
+    height: 120px;
+
+    &:hover {
+      height: 125px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .main-nav {
+    order: -3;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .main-nav__item {
+    box-sizing: border-box;
+    height: 88px;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .main-nav__link {
+    padding: 27px 65px 27px 50px;
+
+    .set-text-params(17px; 700; 24px);
+  }
+
+  .main-nav__item:last-child .main-nav__link {
+    padding-right: 0;
+  }
+
+  .page-header__logo {
+    width: 300px;
+  }
+
+  .extra-nav {
+    display: flex;
+    .no-list-style;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  .extra-nav__item {
+    min-height: auto;
+    border: none;
+  }
+
+  .extra-nav__link {
+    display: block;
+    padding: 27px 60px 0 50px;
+    .set-text-params(15px; 700; 24px);
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .head-line {
+    height: 210px;
+  }
+}

@@ -8,3 +8,22 @@
   font-size: 0;
   line-height: 0;
 }
+
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 768px;
+  }
+
+  @media @desktop-widths {
+    width: 1150px;
+  }
+}
+
+.no-list-style() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
