@@ -1,0 +1,169 @@
+.product {
+  .container;
+  margin: 30px auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.product__title-main {
+  margin: 0;
+  .set-text-params(25px; 700; 30px);
+  color: #000000;
+}
+
+.product__title-sub {
+  display: block;
+
+  text-transform: uppercase;
+  .set-text-params(17px; 700; 30px);
+  color: @lightgreen;
+}
+
+.product__data {
+  margin-bottom: 28px;
+}
+
+.product__description {
+  .set-text-params(15px; 400; 24px);
+  color: @lightbrown;
+}
+
+.product__properties {
+  width: 100%;
+  .set-text-params(15px; 400; 20px);
+  color: @lightbrown;
+}
+
+.product__prop,
+.product__prop-value {
+  height: 40px;
+  vertical-align: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.product__prop {
+  width: 100px;
+}
+
+.product__price {
+  text-align: center;
+  .set-text-params(17px; 700; 24px);
+  color: @lightbrown;
+}
+
+@media @tablet-widths {
+  .product {
+    margin: 50px auto;
+    padding: 0 50px;
+  }
+
+  .product__title {
+    display: flex;
+  }
+
+  .product__title-main {
+    flex-grow: 1;
+
+    .set-text-params(43px; 700; 50px);
+  }
+
+  .product__title-sub {
+    align-self: center;
+    width: 100px;
+
+    text-align: center;
+    .set-text-params(17px; 700; 16px);
+  }
+
+  .product__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    height: 430px;
+  }
+
+  .product__data {
+    order: -2;
+    margin-right: 45px;
+
+    width: 290px;
+  }
+
+  .product__buy {
+    order: -1;
+    margin-top: auto;
+
+    width: 290px;
+  }
+
+  .product__image-wrapper {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 15px;
+
+    width: 333px;
+    height: 100%;
+
+    background-color: #ececec;
+  }
+
+  .product__image {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media @desktop-widths {
+  .product {
+    margin: 70px auto;
+
+    position: relative;
+  }
+
+  .product__title {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+  }
+
+  .product__title-sub {
+    order: -1;
+
+    width: 175px;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+
+  .product__title-main {
+    .set-text-params(53px; 700; 57px);
+  }
+
+  .product__info {
+    height: 636px;
+  }
+
+  .product__data {
+    margin: 0;
+
+    width: 50%;
+    padding: 165px 55px 0 175px;
+    box-sizing: border-box;
+  }
+
+  .product__description {
+    margin: 0 0 50px 0;
+    .set-text-params(17px; 400; 30px);
+  }
+
+  .product__buy {
+    padding-left: 175px;
+    padding-right: 55px;
+  }
+
+  .product__image-wrapper {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+  }
+}

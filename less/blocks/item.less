@@ -1,8 +1,38 @@
+
+.catalog {
+  .container;
+  margin: 30px auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
 .item {
-  margin: @block-margin;
+  width: 260px;
+  margin-bottom: 30px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 260px;
+  height: 195px;
+
+  background: #ececec;
+}
+
+.item__img {
+  display: block;
 }
 
 .item__desc {
+  box-sizing: border-box;
+  padding: 28px;
   border: 1px solid #ededed;
 
   &:hover {
@@ -14,10 +44,6 @@
   }
 }
 
-.item__pic {
-  display: block;
-}
-
 .item__link {
   color: #000000;
   text-decoration: none;
@@ -27,7 +53,7 @@
   }
 
   &:active {
-    color: fadeout(#000000; 70%);;
+    color: fadeout(#000000; 70%);
   }
 }
 
@@ -35,20 +61,103 @@
   .hide-text;
 }
 
-.item__brief-info,
+.item__brief-info {
+  margin-bottom: 25px;
+}
+
 .item__purchase {
-  padding: 28px;
+  position: relative;
+  padding-top: 22px;
+
+  border-top: 1px solid #ececec;
 }
 
 .item__title {
+  display: block;
   .set-text-params(17px; 700; 24px);
 }
 
 .item__properties {
+  margin: 10px 0 0 0;
   .set-text-params(13px; 400; 30px);
   color: @lightbrown;
 }
 
 .item__price {
   .set-text-params(15px; 700; 24px);
+}
+
+.item__cart-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media @tablet-widths {
+  .catalog {
+    margin: 50px auto;
+    padding: 0 50px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 54px 0;
+
+    width: 668px;
+  }
+
+  .item__img-container {
+    width: 333px;
+    height: 333px;
+  }
+
+  .item__desc {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item__purchase {
+    margin-top: auto;
+  }
+
+  .item__title {
+    width: 272px;
+    .set-text-params(20px; 700; 24px);
+  }
+
+  .item__properties {
+    font-size: 15px;
+  }
+
+  .item__price {
+    font-size: 17px;
+  }
+}
+
+@media @desktop-widths {
+  .catalog {
+    margin: 70px auto 55px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item {
+    flex-direction: column;
+    margin: 0;
+
+    width: 316px;
+  }
+
+  .item__img-container {
+    width: 316px;
+    height: 462px;
+  }
+
+  .item__desc {
+    min-height: 197px;
+  }
 }
