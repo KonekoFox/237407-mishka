@@ -1,0 +1,25 @@
+.extra-nav {
+  diaplay: none;
+}
+
+@media @desktop-widths {
+  .extra-nav {
+    display: flex;
+    .no-list-style;
+    box-sizing: border-box;
+    background: transparent;
+  }
+
+  .extra-nav__item {
+    min-height: auto;
+    border: none;
+  }
+
+  .extra-nav__link {
+    display: block;
+    padding: 27px 60px 0 50px;
+    .set-text-params(15px; 700; 24px);
+    color: #000000;
+    text-decoration: none;
+  }
+}
