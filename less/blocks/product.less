@@ -1,6 +1,6 @@
 .product {
   .container;
-  margin: 30px auto;
+  margin: 28px auto 25px;
   padding: 0 30px;
   box-sizing: border-box;
 }
@@ -20,10 +20,12 @@
 }
 
 .product__data {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .product__description {
+  margin-bottom: 17px;
+
   .set-text-params(15px; 400; 24px);
   color: @lightbrown;
 }
@@ -36,16 +38,19 @@
 
 .product__prop,
 .product__prop-value {
-  height: 40px;
-  vertical-align: center;
+  height: 39px;
+  padding: 0;
   border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
 }
 
 .product__prop {
-  width: 100px;
+  width: 95px;
 }
 
 .product__price {
+  margin-bottom: 26px;
+
   text-align: center;
   .set-text-params(17px; 700; 24px);
   color: @lightbrown;
@@ -53,12 +58,13 @@
 
 @media @tablet-widths {
   .product {
-    margin: 50px auto;
-    padding: 0 50px;
+    margin: 45px auto 50px;
+    padding: 0 48px;
   }
 
   .product__title {
     display: flex;
+    margin-bottom: 30px;
   }
 
   .product__title-main {
@@ -90,6 +96,11 @@
     width: 290px;
   }
 
+  .product__description {
+    margin-bottom: 35px;
+    .set-text-params(17px; 400; 30px);
+  }
+
   .product__buy {
     order: -1;
     margin-top: auto;
@@ -97,10 +108,15 @@
     width: 290px;
   }
 
+  .product__price {
+    margin-bottom: 32px;
+    .set-text-params(20px; 700; 24px);
+  }
+
   .product__image-wrapper {
     display: flex;
     align-self: flex-end;
-    margin-top: 15px;
+    margin-top: 25px;
 
     width: 333px;
     height: 100%;
@@ -116,15 +132,15 @@
 
 @media @desktop-widths {
   .product {
-    margin: 70px auto;
+    margin: 70px auto 65px;
 
     position: relative;
   }
 
   .product__title {
     position: absolute;
-    top: 60px;
-    left: 50px;
+    top: 55px;
+    left: 45px;
   }
 
   .product__title-sub {
@@ -147,18 +163,22 @@
     margin: 0;
 
     width: 50%;
-    padding: 165px 55px 0 175px;
+    padding: 155px 55px 0 175px;
     box-sizing: border-box;
   }
 
   .product__description {
-    margin: 0 0 50px 0;
+    margin: 0 0 48px 0;
     .set-text-params(17px; 400; 30px);
   }
 
   .product__buy {
     padding-left: 175px;
     padding-right: 55px;
+  }
+
+  .product__price {
+    margin-bottom: 35px;
   }
 
   .product__image-wrapper {

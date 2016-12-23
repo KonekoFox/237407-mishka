@@ -2,7 +2,7 @@
   display: block;
 
   min-height: 40px;
-  padding: 10px 0 10px 60px;
+  padding: 10px 0 28px 65px;
   box-sizing: border-box;
 
   position: relative;
@@ -49,4 +49,37 @@
   bottom: 6px;
   height: 22px;
   transform: rotate(45deg);
+}
+
+.checkbox-label:hover .checkbox-label__indicator {
+  border: 2px solid #62d1ba;
+}
+
+.checkbox-label:active .checkbox-label__indicator {
+  border: 2px solid #c7c7c7;
+}
+
+@media @tablet-widths {
+  .checkbox-label {
+    margin-bottom: 19px;
+    height: 52px;
+    padding: 15px 0 15px 80px;
+  }
+
+  .checkbox-label__indicator {
+    width: 54px;
+    height: 54px;
+  }
+
+  .checkbox-label__input:checked + .checkbox-label__indicator::before {
+    left: 14px;
+    bottom: 12px;
+    height: 15px;
+  }
+
+  .checkbox-label__input:checked + .checkbox-label__indicator::after {
+    left: 29px;
+    bottom: 10px;
+    height: 30px;
+  }
 }
