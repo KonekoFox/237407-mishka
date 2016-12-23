@@ -3,7 +3,7 @@
   display: block;
 
   min-height: 50px;
-  padding: 10px 0 10px 60px;
+  padding: 10px 0 10px 65px;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -37,4 +37,34 @@
   height: 16px;
   border-radius: 50%;
   background: @lightgreen;
+}
+
+.radio-label:hover .radio-label__indicator {
+  border: 2px solid #62d1ba;
+}
+
+.radio-label:active .radio-label__indicator {
+  border: 2px solid #c7c7c7;
+}
+
+@media @tablet-widths {
+  .radio-label {
+    height: 62px;
+    padding: 20px 0 15px 80px;
+  }
+
+  .radio-label__input + .radio-label__indicator {
+    top: 5px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .radio-label__input:checked + .radio-label__indicator::after {
+    top: 14px;
+    left: 14px;
+
+    width: 20px;
+    height: 20px;
+  }
 }

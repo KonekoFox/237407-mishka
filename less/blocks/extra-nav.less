@@ -17,9 +17,17 @@
 
   .extra-nav__link {
     display: block;
-    padding: 27px 60px 0 50px;
+    padding: 19px 10px 0 50px;
     .set-text-params(15px; 700; 24px);
     color: #000000;
     text-decoration: none;
+
+    &:not(.extra-nav__link--current):hover {
+      color: fadeout(#000000, 40%);
+    }
+
+    &:not(.extra-nav__link--current):active {
+      color: fadeout(#000000, 70%);
+    }
   }
 }
