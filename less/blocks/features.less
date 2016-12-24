@@ -1,33 +1,30 @@
 .features {
   .container;
-  margin: 20px auto;
+  margin: 20px auto 57px;
   padding: 0 30px;
   box-sizing: border-box;
 }
 
 .features__title {
-  margin-bottom: 29px;
+  margin-bottom: 0;
   .set-text-params(25px; 700; 30px);
 }
 
 .features__item {
-  //margin-bottom: 23px;
-  //margin-top: 9px;
-  min-height: 100px;
+  position: relative;
 }
 
 .features__item-description {
-  //margin-top: 16px;
+  display: block;
+  padding-top: 83px;
   .set-text-params(17px; 700; 20px);
 }
 
 .features__item-pic {
-  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
   fill: @lightgreen;
-
-  &:nth-child(2) {
-    padding: 0;
-  }
 }
 
 @media @tablet-widths {
