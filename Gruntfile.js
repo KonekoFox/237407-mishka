@@ -59,7 +59,6 @@ module.exports = function(grunt) {
     },
     svgstore: {
       options: {
-        // cleanup: ['fill', 'style'],
         svg: {
           style: "display: none"
         }

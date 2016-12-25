@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var mainMenuBtn = document.querySelector(".page-header__toggle");
 var mainNav = document.querySelector(".main-nav");
