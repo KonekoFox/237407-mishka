@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -195,9 +196,9 @@
       </symbol>
     </svg>
 
-    <header class="page-header page-header--index ">
+    <header class="page-header page-header--index">
       <div class=page-header__logo>
-        <a class="page-header__link">
+        <a class="page-header__link page-header__link--current">
           <svg class="page-header__svg page-header__svg-mobile" width="86" height="35">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mobile"></use>
           </svg>
@@ -208,9 +209,9 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-desktop"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__toggle page-header__toggle--open">Меню</button>
+        <button type="button" class="page-header__toggle page-header__toggle--open page-header__toggle--no-js">Меню</button>
       </div>
-      <ul class="main-nav main-nav--closed">
+      <ul class="main-nav main-nav--closed main-nav--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -218,7 +219,7 @@
           <a class="main-nav__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
-      <ul class="user-nav user-nav--closed">
+      <ul class="user-nav user-nav--closed user-nav--no-js">
         <li class="user-nav__item">
           <a class="user-nav__link user-nav__link--search" href="#">Поиск по сайту
             <svg class="user-nav__link-svg" width="20" height="20">
@@ -234,7 +235,7 @@
           </a>
         </li>
       </ul>
-      <ul class="extra-nav extra-nav--opened">
+      <ul class="extra-nav">
         <li class="extra-nav__item">
           <a class="extra-nav__link" href="#">Новые поступления</a>
         </li>
@@ -262,9 +263,6 @@
           </a>
         </li>
       </ul>
-      <svg class="page-header__zigzag" width="100%" height="34">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bg-zigzag-fill"></use>
-      </svg>
     </header>
 
     <main class="main-content">
@@ -274,40 +272,32 @@
           <span class="product__title-sub">Товар недели</span>
         </div>
         <div class="product__info">
-          <div class="product__data">
-            <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <table class="product__properties">
-              <tr>
-                <td class="product__prop">Цвет:</td>
-                <td class="product__prop-value">&laquo;Тиффани&raquo;/серый</td>
-              </tr>
-              <tr>
-                <td class="product__prop">Диаметр:</td>
-                <td class="product__prop-value">25 см</td>
-              </tr>
-              <tr>
-                <td class="product__prop">Высота:</td>
-                <td class="product__prop-value">15 см</td>
-              </tr>
-            </table>
-          </div>
-          <div class="product__image-wrapper">
-            <picture class="product__image">
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
-            </picture>
-          </div>
-          <div class="product__buy">
-            <p class="product__price">Цена: 990 руб.</p>
-            <a class="user-btn" href="#">Заказать</a>
-          </div>
+          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="product__properties">
+            <tr>
+              <td class="product__prop">Цвет:</td>
+              <td class="product__prop-value">&laquo;Тиффани&raquo;/серый</td>
+            </tr>
+            <tr>
+              <td class="product__prop">Диаметр:</td>
+              <td class="product__prop-value">25 см</td>
+            </tr>
+            <tr>
+              <td class="product__prop">Высота:</td>
+              <td class="product__prop-value">15 см</td>
+            </tr>
+          </table>
+        </div>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+        </picture>
+        <div class="product__buy">
+          <p class="product__price">Цена: 990 руб.</p>
+          <a class="user-btn product__btn" href="#">Заказать</a>
         </div>
       </article>
-
-      <svg class="zigzag-line" width="100%" height="34">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bg-zigzag-line"></use>
-      </svg>
 
       <section class="features">
         <h2 class="features__title">Коротко о нас:</h2>
@@ -315,37 +305,36 @@
           <svg class="features__item-pic" width="47" height="40">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-1"></use>
           </svg>
-          <p class="features__item-description">Экологически<br> чистые материалы</p>
-        </div>
+          <span class="features__item-description">Экологически<br> чистые материалы</span>        </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="40">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-3"></use>
           </svg>
-          <p class="features__item-description">Скандинавский стиль по российской цене</p>
+          <span class="features__item-description">Скандинавский стиль по&nbspроссийской цене</span>
         </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="27">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-5"></use>
           </svg>
-          <p class="features__item-description">Увеличивает лайки на фотографиях</p>
+          <span class="features__item-description">Увеличивает лайки на&nbspфотографиях</span>
         </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="34">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-2"></use>
           </svg>
-          <p class="features__item-description">Связано вручную с любовью и умилением</p>
+          <span class="features__item-description">Связано вручную с любовью&nbspи&nbspумилением</span>
         </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="25">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-4"></use>
           </svg>
-          <p class="features__item-description">Поддержка отечественного производителя</p>
+          <span class="features__item-description">Поддержка отечественного производителя</span>
         </div>
         <div class="features__item">
           <svg class="features__item-pic" width="47" height="32">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-feature-6"></use>
           </svg>
-          <p class="features__item-description">Поставляется в подарочной упаковке</p>
+          <span class="features__item-description">Поставляется в&nbspподарочной&nbspупаковке</span>
         </div>
       </section>
 
@@ -369,35 +358,24 @@
             </svg>
           </a>
         </div>
-        <a class="user-btn" href="#">Написать</a>
+        <a class="user-btn feedback__btn" href="#">Написать</a>
       </section>
 
-      <svg class="zigzag-line" width="100%" height="7">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bg-zigzag-line"></use>
-      </svg>
-
       <section class="contacts">
-        <div class="contacts__heading">
-          <h2 class="contacts__title">Контакты</h2>
-          <svg class="contacts__flag" width="47" height="81">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-flag"></use>
-          </svg>
-        </div>
-        <div class="contacts__container">
-          <div class="contacts__contact">
-            <span class="contacts__desc">email:</span>
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__info">
+          <div class="contacts__row">
+            <span class="contacts__email-label">email:</span>
+            <a class="contacts__email-link email-link">info@mimimishkashop.ru</a>
           </div>
-          <div class="contacts__contact-data">
-            <span class="contacts__desc email-link">info@mimimishkashop.ru</span>
-          </div>
-          <div class="contacts__contact">
-            <span class="contacts__desc">адрес:</span>
-          </div>
-          <div class="contacts__contact-data">
-            <span class="contacts__desc">г.&nbspСанкт-Петербург,<br>ул.&nbspБольшая Конюшенная,<br>д.&nbsp19/8,&nbspофис&nbsp101</span>
+          <div class="contacts__row">
+            <span class="contacts__address-label">адрес:</span>
+            <span class="contacts__address">г. Санкт-Петербург,<br>ул.&nbspБольшая Конюшенная,<br>д.&nbsp19/8,&nbspофис&nbsp101</span>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map" id="yandex-map">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=DckQe95sVjTUBMgMjJCCpnxvkf1q8pQV&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+        </div>
         <a class="user-btn contacts__user-btn" href="#">Напишите нам</a>
       </section>
     </main>
@@ -412,17 +390,17 @@
       </section>
       <section class="main-footer__social">
         <a href="#" class="social-link">Instagram
-          <svg class="social-link__svg" width="20" height="20">
+          <svg class="social-link__svg" width="21" height="21">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
           </svg>
         </a>
         <a href="#" class="social-link">Facebook
-          <svg class="social-link__svg" width="20" height="20">
+          <svg class="social-link__svg" width="15" height="29">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
           </svg>
         </a>
         <a href="#" class="social-link">Twitter
-          <svg class="social-link__svg" width="20" height="20">
+          <svg class="social-link__svg" width="24" height="21">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
@@ -436,6 +414,23 @@
         </a>
       </section>
     </footer>
+
+    <div class="modal-content">
+      <h2 class="modal-content__title">Добавить в корзину</h2>
+      <p class="modal-content__text">Выберите размер</p>
+      <form class="modal-content__form" action="#" method="post">
+        <input type="radio" class="modal-content__input" id="s" name="size" value="s" checked>
+        <label for="s" class="modal-content__label">S</label>
+        <input type="radio" class="modal-content__input" id="m" name="size" value="m">
+        <label for="m" class="modal-content__label">M</label>
+        <input type="radio" class="modal-content__input" id="l" name="size" value="l">
+        <label for="l" class="modal-content__label">L</label>
+        <div class="modal-content__btn-wrapper">
+          <button type="submit" class="user-btn modal-content__btn">Добавить</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-overlay"></div>
 
     <script src="js/app.js"></script>
   </body>

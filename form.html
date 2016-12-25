@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Оформление заказа</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -143,9 +144,9 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-desktop"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__toggle page-header__toggle--open">Меню</button>
+        <button type="button" class="page-header__toggle page-header__toggle--open page-header__toggle--no-js">Меню</button>
       </div>
-      <ul class="main-nav main-nav--closed">
+      <ul class="main-nav main-nav--closed main-nav--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -153,7 +154,7 @@
           <a class="main-nav__link main-nav__link--current">Вязание на заказ</a>
         </li>
       </ul>
-      <ul class="user-nav user-nav--closed">
+      <ul class="user-nav user-nav--closed user-nav--no-js">
         <li class="user-nav__item">
           <a class="user-nav__link user-nav__link--search" href="#">Поиск по сайту
             <svg class="user-nav__link-svg" width="20" height="20">
@@ -169,7 +170,7 @@
           </a>
         </li>
       </ul>
-      <ul class="extra-nav extra-nav--opened">
+      <ul class="extra-nav">
         <li class="extra-nav__item">
           <a class="extra-nav__link" href="#">Новые поступления</a>
         </li>
@@ -179,9 +180,6 @@
       </ul>
       <div class="page-header__delivery">Бесплатная доставка по России</div>
       <h1 class="head-line">Вязание на заказ</h1>
-      <svg class="page-header__zigzag" width="768" height="auto">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#bg-zigzag-fill"></use>
-      </svg>
     </header>
 
     <main class="inner-content">

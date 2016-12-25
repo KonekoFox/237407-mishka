@@ -4,6 +4,15 @@
   background: #ffffff;
 
   display: none;
+
+  &--closed {
+    display: none;
+  }
+
+  &--no-js,
+  &--opened {
+    display: block;
+  }
 }
 
 .user-nav__item {
@@ -50,14 +59,6 @@
 
 .user-nav__link:active .user-nav__link-svg {
   fill: rgba(99, 209, 187, 0.3);
-}
-
-.user-nav--closed {
-  display: none;
-}
-
-.user-nav--opened {
-  display: block;
 }
 
 @media @tablet-widths {
