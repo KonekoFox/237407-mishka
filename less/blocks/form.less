@@ -96,6 +96,13 @@
   bottom: 17px;
   right: 8px;
   fill: #cccccc;
+
+  &--email {
+  width: 32px;
+  height: 42px;
+  bottom: 4px;
+  right: 5px;
+  }
 }
 
 .form__textarea {
@@ -103,6 +110,7 @@
 
   height: 142px;
   padding: 15px;
+  font-family: "OpenSans", "Arial", sans-serif;
   border: 2px solid #000000;
   box-sizing: border-box;
 }
@@ -123,7 +131,7 @@
 
 @media @tablet-widths {
   .form {
-    margin: 75px auto 52px;
+    margin: 75px auto 48px;
   }
 
   .form__title {
@@ -155,7 +163,7 @@
   }
 
   .form__fieldset:last-child {
-    padding-top: 20px;
+    padding-top: 16px;
     padding-bottom: 0;
     background-color: #ffffff;
   }
@@ -234,6 +242,10 @@
 
   .form__svg {
     right: 25px;
+
+    &--email {
+      right: 22px;
+    }
   }
 
   .form__field-wrapper:last-child {
@@ -243,28 +255,31 @@
   .form__textarea {
     margin-top: 20px;
     height: 143px;
+    .set-text-params(19px; 400; 18px);
   }
 
   .form__submit {
     order: -1;
-    margin-top: 0;
+    margin-top: 5px;
     width: 230px;
   }
 
   .form__note,
   .form__description {
-    .set-text-params(17px; 400; auto);
+    .set-text-params(17px; 400; 27px);
   }
 }
 
 @media @desktop-widths {
   .form {
-    margin: 122px auto 50px;
+    margin: 122px auto 48px;
   }
 
   .form__description {
     margin-left: 175px;
     margin-right: 175px;
+    margin-bottom: 15px;
+    line-height: 29px;
   }
 
   .form__title {
@@ -336,11 +351,26 @@
   }
 
   .form__textarea {
-    margin-top: 15px;
+    margin-top: 17px;
     height: 143px;
   }
 
   .form__svg {
     right: 10px;
+
+    &--email {
+    width: 32px;
+    height: 42px;
+    bottom: 4px;
+    right: 5px;
+    }
+  }
+
+  .form__submit {
+    margin-top: 0;
+  }
+
+  .form__note {
+    margin-top: 10px;
   }
 }

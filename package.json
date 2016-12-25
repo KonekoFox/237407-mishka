@@ -1,37 +1,42 @@
 {
-  "name": "mishka",
+  "name": "208340-mishka",
   "version": "0.1.0",
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
+  "author": "Сергей Зубов",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:htmlacademy-adaptive/208340-mishka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlacademy-adaptive/208340-mishka/issues"
+  },
+  "homepage": "https://github.com/htmlacademy-adaptive/208340-mishka",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "0.1.x",
-    "autoprefixer": "6.5.3",
-    "css-mqpacker": "^5.0.1",
+    "autoprefixer": "6.3.6",
+    "browser-sync": "2.13.0",
+    "css-mqpacker": "5.0.1",
+    "editorconfig-tools": "0.1.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-imagemin": "1.0.1",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-uglify": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
-    "grunt-csso": "^2.1.0",
+    "grunt-csso": "1.0.0",
     "grunt-postcss": "0.8.0",
+    "grunt-svgmin": "3.2.0",
+    "grunt-svgstore": "1.0.0",
     "load-grunt-tasks": "^3.5.2"
   },
   "scripts": {
-    "test": "editorconfig-cli",
-    "build": "grunt less",
+    "test": "editorconfig-tools check *",
+    "build": "grunt build",
     "start": "npm run build && grunt serve"
   },
-  "editorconfig-cli": [
-    "*.html",
-    "*.json",
-    "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "less/**/*.less"
-  ],
   "engines": {
-    "node": "6.7"
+    "node": "5.11"
   }
 }
