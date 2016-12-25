@@ -59,14 +59,13 @@ module.exports = function(grunt) {
     },
     svgstore: {
       options: {
-        cleanup: ['fill', 'style'],
         svg: {
           style: "display: none"
         }
       },
       symbols: {
         files: {
-          "build/img/inline/symbols.svg": ["img/*.svg"]
+          "build/img/inline/symbols.svg": ["img/inline/*.svg"]
         }
       }
     },
