@@ -1,4 +1,8 @@
 .developers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   .set-text-params(19px; 700; 18px);
   text-decoration: none;
   color: #000000;
@@ -6,6 +10,12 @@
   &:active {
     color: fadeout(#000000, 70%);
   }
+}
+
+.developers__text {
+  display: inline-block;
+  .set-text-params(19px; 700; 18px);
+  margin-right: 23px;
 }
 
 .developers__svg {

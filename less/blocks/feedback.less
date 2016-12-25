@@ -1,8 +1,22 @@
 .feedback {
+  position: relative;
+
   .container;
-  margin: 30px auto;
+  margin: 30px auto 85px;
   padding: 0 30px;
   box-sizing: border-box;
+}
+
+.feedback:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  height: 6px;
+  background: url(../img/bg-zigzag-line.svg) repeat-x;
+  background-size: contain;
 }
 
 .feedback__title {
@@ -16,7 +30,7 @@
 }
 
 .feedback__author {
-  margin: 25px 0 30px;
+  margin: 25px 0 33px;
 }
 
 .feedback__author-name {
@@ -38,7 +52,7 @@
   display: flex;
 
   width: 50%;
-  height: 52px;
+  height: 50px;
   .hide-text;
   border: 1px solid #ececec;
 
@@ -59,17 +73,10 @@
   fill: #b2b2b2;
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-       (min-width: 768px) and (min-resolution: 1.5dppx) {
-  .contacts__map {
-    background-image: url("../img/review@2x.jpg");
-  }
-}
-
 @media @tablet-widths {
   .feedback {
-    margin: 70px auto 65px;
-    padding: 75px 50px 0;
+    margin: 67px auto 100px;
+    padding: 79px 50px 58px;
     min-height: 457px;
 
     display: flex;
@@ -81,11 +88,17 @@
     background-position: top left;
   }
 
+  .feedback:after {
+    height: 17px;
+    bottom: -40px;
+  }
+
   .feedback__title {
     order: -2;
     flex-grow: 1;
 
     margin: 0;
+    margin-left: -5px;
 
     .set-text-params(43px; 700; 50px);
   }
@@ -96,7 +109,7 @@
   }
 
   .feedback__message {
-    margin: 50px 0 55px;
+    margin: 45px 0 60px;
     width: 100%;
 
     .set-text-params(17px; 400; 30px);
@@ -119,14 +132,35 @@
 @media @desktop-widths {
   .feedback {
     .container;
-    margin: 0 auto;
+    margin: 0 auto 160px;
+
     width: 1050px;
+    padding-top: 70px;
     box-sizing: border-box;
+    background-position-x: 50px;
+  }
+
+  .feedback::after {
+    bottom: -95px;
+    height: 26px;
   }
 
   .feedback__title,
   .feedback__message,
   .feedback__author {
     padding-left: 175px;
+  }
+
+  .feedback__title {
+    .set-text-params(53px; 700; 57px);
+  }
+
+  .feedback__btn {
+    margin-top: 10px;
+  }
+
+  .feedback__message {
+    margin-top: 45px;
+    margin-bottom: 40px;
   }
 }

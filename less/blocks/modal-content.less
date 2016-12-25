@@ -1,0 +1,132 @@
+.modal-content {
+  position: fixed;
+
+  display: none;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  min-height: 337px;
+  padding: 0 30px 45px;
+  box-sizing: border-box;
+
+  z-index: 40;
+
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  border-top: 1px solid #c7c7c7;
+  box-shadow: 0 5px 10px -5px rgba(0, 1, 1, 0.25);
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal-content__title {
+  padding-top: 30px;
+  margin: 0 50px 25px;
+
+  .set-text-params(25px; 700; 30px);
+  text-transform: uppercase;
+}
+
+.modal-content__text {
+  margin-bottom: 40px;
+}
+
+.modal-content__input {
+  display: none;
+}
+
+.modal-content__form {
+  font-size: 0;
+}
+
+.modal-content__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  width: 82px;
+  height: 52px;
+  margin-right: 7px;
+
+  color: #000000;
+  text-transform: uppercase;
+  .set-text-params(17px; 700; 17px);
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.modal-content__label::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  transform: translateY(-50%);
+  width: 82px;
+  height: 52px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+  border: 2px solid #ececec;
+  cursor: pointer;
+}
+
+.modal-content__input:checked + .modal-content__label::before {
+  border: 2px solid #62d1ba;
+}
+
+.modal-content__btn-wrapper {
+  margin-top: 20px;
+}
+
+.modal-content__btn {
+  color: #ffffff;
+  background: @lightgreen;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #46c1ae;
+  }
+
+  &:active {
+    background: fadeout(#46c1ae, 30%);
+  }
+}
+
+@media @tablet-widths {
+  .modal-content {
+    width: 566px;
+    padding: 0 105px;
+    border: 1px solid #c7c7c7;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.25);
+  }
+
+  .modal-content__title {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  .modal-content__text {
+    margin-bottom: 35px;
+
+    .set-text-params(17px; 400; 30px);
+  }
+
+  .modal-content__label {
+    width: 112px;
+
+    &::before {
+      width: 112px;
+    }
+  }
+}
