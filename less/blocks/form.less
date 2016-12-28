@@ -47,7 +47,7 @@
   .set-text-params(17px; 700; 18px);
   display: block;
   margin: 5px 0;
-}
+  }
 
 .form__user-data {
   margin: 28px 0 33px;
@@ -69,6 +69,7 @@
   border-bottom: 2px solid #000000;
   box-sizing: border-box;
 
+  font-family: "OpenSans","Arial",sans-serif;
   .set-text-params(17px; 400; 18px);
 }
 
@@ -98,9 +99,7 @@
   fill: #cccccc;
 
   &--email {
-  width: 32px;
-  height: 42px;
-  bottom: 4px;
+  bottom: 6px;
   right: 5px;
   }
 }
@@ -197,6 +196,7 @@
     width: auto;
     height: 45px;
     padding-left: 18px;
+    padding-bottom: 13px;
   }
 
   .form__user-name {
@@ -251,6 +251,7 @@
 
   .form__field-wrapper:last-child {
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .form__textarea {
@@ -268,6 +269,10 @@
   .form__note,
   .form__description {
     .set-text-params(17px; 400; 27px);
+  }
+
+  .form__note {
+    width: 302px;
   }
 }
 
@@ -297,7 +302,7 @@
     }
 
     &:last-child {
-      padding-top: 23px;
+      padding-top: 20px;
       padding-left: 225px;
       padding-right: 225px;
     }
@@ -338,7 +343,7 @@
   }
 
   .form__contacts {
-    padding-top: 57px;
+    padding-top: 59px;
     padding-right: 225px;
     padding-bottom: 50px;
   }
@@ -365,10 +370,6 @@
     bottom: 4px;
     right: 5px;
     }
-  }
-
-  .form__submit {
-    margin-top: 0;
   }
 
   .form__note {

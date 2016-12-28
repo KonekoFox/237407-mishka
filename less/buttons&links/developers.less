@@ -1,11 +1,11 @@
 .developers {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
-  .set-text-params(19px; 700; 18px);
   text-decoration: none;
   color: #000000;
+  font-size: 0;
 
   &:active {
     color: fadeout(#000000, 70%);
@@ -14,11 +14,16 @@
 
 .developers__text {
   display: inline-block;
+  vertical-align: middle;
+  width: 128px;
   .set-text-params(19px; 700; 18px);
+  margin-bottom: 5px;
   margin-right: 27px;
 }
 
 .developers__svg {
+  width: 27px;
+  height: 34px;
   fill: #63d1bb;
 }
 
@@ -28,4 +33,11 @@
 
 .developers:active .developers__svg {
   fill: fadeout(#46c1ae, 70%);
+}
+
+@media @desktop-widths {
+  .developers__text {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }

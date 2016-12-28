@@ -6,14 +6,16 @@
   margin: 0;
 
   min-height: 177px;
+  padding: 20px;
+  box-sizing: border-box;
   .set-text-params(27px; 700; 30px);
 }
 
 .head-line--index {
   display: block;
   margin: 0;
-  height: 282px;
-  padding: 70px 35px 0;
+  min-height: 282px;
+  padding: 70px 35px 20px;
   box-sizing: border-box;
 
   text-align: center;
@@ -24,7 +26,7 @@
 
   @media @retina {
     background-image: url("../img/hero-mobile@2x.jpg");
-    background-size: cover;
+    background-size: inherit;
   }
 }
 
@@ -33,7 +35,7 @@
     display: block;
     width: 100%;
     min-height: 185px;
-    padding-top: 55px;
+    padding: 55px;
     box-sizing: border-box;
 
     text-align: center;
@@ -41,8 +43,8 @@
   }
 
   .head-line--index {
-    height: 585px;
-    padding: 115px 0 370px;
+    min-height: 585px;
+    padding: 115px 75px 75px;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -40px;
   }
@@ -58,11 +60,12 @@
 
 @media @desktop-widths {
   .head-line {
-    height: 212px;
+    min-height: 212px;
     .set-text-params(53px; 700; 53px);
 
     &--index {
-      padding: 115px 0 470px;
+      min-height: 585px;
+      padding: 115px 200px 115px;
     }
   }
 }
