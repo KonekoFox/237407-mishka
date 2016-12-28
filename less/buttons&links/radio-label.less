@@ -6,6 +6,10 @@
   padding: 10px 0 10px 65px;
   box-sizing: border-box;
   cursor: pointer;
+
+  &:not(.radio-label:first-child) {
+    padding-top: 15px;
+  }
 }
 
 .radio-label__input {
@@ -49,7 +53,8 @@
 
 @media @tablet-widths {
   .radio-label {
-    height: 62px;
+    width: 500px;
+    min-height: 62px;
     padding: 20px 0 15px 80px;
   }
 
@@ -66,5 +71,11 @@
 
     width: 20px;
     height: 20px;
+  }
+}
+
+@media @desktop-widths {
+  .radio-label__input {
+    width: 700px;
   }
 }

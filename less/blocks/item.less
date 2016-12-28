@@ -80,9 +80,9 @@
 }
 
 .item__cart-svg {
-  position: absolute;
-  top: 20px;
-  right: 0;
+  float: right;
+  width: 20px;
+  height: 20px;
 
   fill: rgba(0, 0, 0, 0.2);
 }
@@ -112,6 +112,7 @@
   .item__desc {
     flex-grow: 1;
     flex-basis: 50%;
+    padding-bottom: 26px;
 
     display: flex;
     flex-direction: column;
@@ -119,8 +120,9 @@
 
   .item__purchase {
     margin-top: auto;
+    padding-top: 22px;
     padding-left: 8px;
-    padding-right: 10px;
+    padding-right: 7px;
   }
 
   .item__title {
@@ -137,8 +139,6 @@
   }
 
   .item__cart-svg {
-    top: 22px;
-    right: 7px;
   }
 }
 
@@ -161,7 +161,7 @@
   }
 
   .item__purchase {
-    padding: 22px 0 0;
+    padding: 22px 7px 0 0;
   }
 
   .item__desc {
